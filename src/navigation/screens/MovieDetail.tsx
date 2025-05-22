@@ -47,6 +47,9 @@ const MovieDetail = () => {
         <SafeAreaView>
             <View>
                 <Text>{movieDetail.title}</Text>
+                <Text>관람객 평점 : {movieDetail.vote_average}점</Text>
+                <Text>투표수 : {movieDetail.vote_count}</Text>
+                <Text>요약 : {movieDetail.overview}</Text>
             </View>
         </SafeAreaView>
     );

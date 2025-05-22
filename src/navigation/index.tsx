@@ -15,6 +15,7 @@ import { Updates } from './screens/Updates';
 import { NotFound } from './screens/NotFound';
 import {AntDesign} from "@expo/vector-icons";
 import Home2 from "./screens/Home2";
+import MovieDetail from "./screens/MovieDetail";
 
 const HomeTabs = createBottomTabNavigator({
   screens: {
@@ -82,6 +83,16 @@ const RootStack = createNativeStackNavigator({
       options: {
         title: 'Home',
         headerShown: false,
+      },
+    },
+    MovieDetail: {
+      screen: MovieDetail,
+      linking: {
+        path: 'movie/:id' // movie의 id를 받는것
+      },
+      options: {
+        title: 'Movie Detail',
+        headerShown: true,
       },
     },
     Profile: {

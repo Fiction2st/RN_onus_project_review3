@@ -35,7 +35,7 @@ export function Home() {
         fetchMovies();
     }, []);
 
-    const goToDetails = (movie) => {
+    const goToDetails =(movie) => {
         navigation.navigate("MovieDetail", {id : movie.id, title:movie.title});
     }
 
