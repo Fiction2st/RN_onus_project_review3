@@ -16,9 +16,33 @@ import { NotFound } from './screens/NotFound';
 import {AntDesign} from "@expo/vector-icons";
 import Home2 from "./screens/Home2";
 import MovieDetail from "./screens/MovieDetail";
+import Three from "./screens/Three";
 
 const HomeTabs = createBottomTabNavigator({
   screens: {
+    Home3: { // 추가 작성을 통해 navigator 탭 바를 추가할 수 있음, 보통 최대 5개
+      screen: Three,
+      screenOptions:{
+        tabBarLabelStyle:{
+          fontFamily : 'NotoSansKR',
+          fontSize : 14,
+        },
+      },
+      options: {
+        title: '첫번째',
+        tabBarIcon: ({ color, size }) => (
+            // <Image
+            //     source={newspaper}
+            //     tintColor={color}
+            //     style={{
+            //       width: size,
+            //       height: size,
+            //     }}
+            // />
+            <AntDesign name="linechart" size={24} color={color} />
+        ),
+      },
+    },
     Home: {
       screen: Home,
       options: {
@@ -58,6 +82,7 @@ const HomeTabs = createBottomTabNavigator({
         ),
       },
     },
+
     Updates: {
       screen: Updates,
       options: {

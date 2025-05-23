@@ -5,6 +5,8 @@ import * as React from 'react';
 import { Navigation } from './navigation';
 import {useFonts} from "expo-font";
 import {useEffect} from "react";
+import {QueryClientProvider} from "@tanstack/react-query";
+import queryClient from "./api/queryClient";
 
 Asset.loadAsync([
   ...NavigationAssets,
@@ -30,6 +32,7 @@ export function App() {
         return null;
     }
     return (
+    <QueryClientProvider client={queryClient}>
     <Navigation
       linking={{
         enabled: 'auto',
@@ -42,5 +45,6 @@ export function App() {
         SplashScreen.hideAsync();
       }}
     />
+    </QueryClientProvider>
   );
 }
