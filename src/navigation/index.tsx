@@ -17,6 +17,7 @@ import {AntDesign} from "@expo/vector-icons";
 import Home2 from "./screens/Home2";
 import MovieDetail from "./screens/MovieDetail";
 import Three from "./screens/Three";
+import Maps from "./screens/Maps";
 
 const HomeTabs = createBottomTabNavigator({
   screens: {
@@ -79,6 +80,22 @@ const HomeTabs = createBottomTabNavigator({
             //     }}
             // />
             <AntDesign name="linechart" size={24} color={color} />
+        ),
+      },
+    },
+    Home4: {
+      screen: Maps,
+      options: {
+        title: 'Feed',
+        tabBarIcon: ({ color, size }) => (
+            <Image
+                source={newspaper}
+                tintColor={color}
+                style={{
+                  width: size,
+                  height: size,
+                }}
+            />
         ),
       },
     },
