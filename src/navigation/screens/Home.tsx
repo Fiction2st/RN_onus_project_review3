@@ -3,7 +3,7 @@ import {Animated, SafeAreaView, StyleSheet, View, ScrollView, TouchableOpacity} 
 import {useNavigation} from "@react-navigation/native";
 import {useEffect, useState} from "react";
 import axios from "axios";
-import {useGetMovies} from "../../api/apiFunc";
+import {useGetMovies} from "../../api/useQueries";
 
 
 export function Home() {
